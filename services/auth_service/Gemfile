@@ -1,0 +1,31 @@
+source 'https://rubygems.org'
+
+ruby '2.6.10'
+
+# Rails core
+gem 'rails', '~> 6.1.0'
+gem 'puma', '~> 5.0'
+gem 'pg', '~> 1.1'
+
+# Authentication & Authorization
+gem 'devise', '~> 4.8'
+gem 'devise-jwt', '~> 0.9.0'
+gem 'rack-cors', '~> 1.1'
+
+# API serialization
+gem 'active_model_serializers', '~> 0.10.0'
+
+# Payment processing
+gem 'stripe', '~> 5.0'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
+group :development do
+  gem 'listen', '~> 3.3'
+  gem 'spring'
+end
